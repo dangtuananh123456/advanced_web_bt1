@@ -1,0 +1,129 @@
+/* General Game Styling */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-info {
+    margin-left: 20px;
+}
+
+ol {
+    padding-left: 30px;
+}
+
+/* Board Styling */
+.board-row {
+    display: flex;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border: 2px solid #ddd;
+    font-size: 32px;
+    /* Tăng kích thước chữ để rõ hơn */
+    font-weight: bold;
+    line-height: 80px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    color: #333;
+    /* Màu chữ rõ ràng */
+}
+
+.square:hover {
+    background-color: #e0e0e0;
+    color: #333;
+    /* Đảm bảo màu chữ không thay đổi khi hover */
+}
+
+
+/* Highlight winning squares */
+.square.highlight {
+    background-color: #ffeb3b;
+    color: red;
+    border-color: #ff5722;
+    animation: pulse 1s infinite;
+}
+
+/* Keyframes for pulsing animation on winning squares */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px #ff5722;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #ff5722;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #ff5722;
+    }
+}
+
+/* Status Styling */
+.status {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Button Styling */
+button {
+    margin-top: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #903f3f;
+    cursor: not-allowed;
+}
+
+/* History list styling */
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Ensure the whole container is centered on the screen */
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
